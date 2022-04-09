@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 
 const colors = {
   primary: {
+    600: "#371E47",
     500: "#4B286D",
     400: "#C9BFD3",
     300: "#DBD4E2",

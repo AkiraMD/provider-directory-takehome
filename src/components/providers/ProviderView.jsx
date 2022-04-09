@@ -1,31 +1,27 @@
 import React from "react";
-import {
-  Box,
-  Center,
-  Stack,
-  Avatar,
-  Text,
-  useColorModeValue,
-  useTheme,
-  Badge,
-} from "@chakra-ui/react";
+import { Box, Stack, Avatar, Text, useTheme, Badge } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
-const ProviderView = () => {
+const ProviderView = ({ id, name, title, bio, availability }) => {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   return (
-    // <Center py={6} w="full">
     <Box
       bgColor={theme.colors.neutral[0]}
       _hover={{
         bgColor: theme.colors.neutral[300],
         cursor: "pointer",
       }}
-      // maxW={"445px"}
       w="full"
       rounded="md"
-      p={6}
+      py={3}
+      px={6}
       overflow="hidden"
+      maxH="167px"
+      onClick={() => {
+        navigate(`/provider/profile/${id}`);
+      }}
     >
       <Stack direction={"row"} spacing={4} align={"center"}>
         <Avatar
@@ -41,8 +37,9 @@ const ProviderView = () => {
             fontWeight={500}
             color={theme.colors.neutral[900]}
             fontSize="16px"
+            noOfLines={1}
           >
-            Dylan Zambrano, MSW
+            {name}, {title}
           </Text>
           <Text
             fontWeight={400}
@@ -53,15 +50,14 @@ const ProviderView = () => {
           </Text>
         </Stack>
       </Stack>
-      <Stack my="11px">
+      <Stack my="10px">
         <Text
           color={theme.colors.neutral[700]}
           fontWeight={400}
           fontSize="14px"
+          noOfLines={2}
         >
-          Dylan is a therapist of 15 years experience. Working in international
-          contexts, her background includes community health care, paediatrics,
-          and geriatrics. Lorem ipsum ...
+          {bio}
         </Text>
       </Stack>
       <Box d="flex" alignItems="baseline">
@@ -74,11 +70,10 @@ const ProviderView = () => {
           color={theme.colors.neutral[800]}
           bgColor={theme.colors.secondary[200]}
         >
-          Available tomorrow
+          Available {availability}
         </Badge>
       </Box>
     </Box>
-    // </Center>
   );
 };
 

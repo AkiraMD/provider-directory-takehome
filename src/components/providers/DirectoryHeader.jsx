@@ -1,20 +1,6 @@
 import React from "react";
 import {
-  Box,
   Flex,
-  Avatar,
-  Link,
-  Button,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuDivider,
-  useDisclosure,
-  useColorModeValue,
-  Stack,
-  useColorMode,
-  Center,
   useTheme,
   Text,
   Tag,
@@ -32,14 +18,7 @@ const DirectoryHeader = () => {
       h={192}
       placeContent="center"
     >
-      <Container
-        // alignItems="center"
-        // display="block"
-        // justifyContent="space-between"
-        //   border="solid black"
-        py="24px"
-        px="8px"
-      >
+      <Container py="24px" px="8px">
         <Text
           color={theme.colors.neutral[900]}
           fontWeight={500}
