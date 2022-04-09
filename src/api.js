@@ -30,7 +30,6 @@ export const fetchProvider = (providerId) => {
  * @return {Promise<Array<{id: string, name: string, title: string, avatarUrl: string, bio: string}>>>}
  */
 export const fetchProviders = () => {
-  console.log("fetching providers!!");
   return new Promise((resolve) =>
     setTimeout(
       () => resolve(fullDataset.map(makePartialRepresentation)),

@@ -11,13 +11,13 @@ import {
 } from "@chakra-ui/react";
 import { ChevronDownIcon, ChevronUpIcon } from "@chakra-ui/icons";
 
-const ProviderBio = () => {
+const ProviderBio = ({ name, title, bio }) => {
   const theme = useTheme();
 
   return (
     <Box px="32px" py="24px">
       <Text fontSize="18px" fontWeight={500} color={theme.colors.neutral[900]}>
-        Dr. Justina Choi, MSW
+        {name}, {title}
       </Text>
       <Text fontSize="14px" fontWeight={500} color={theme.colors.neutral[700]}>
         Psychologist
@@ -37,12 +37,7 @@ const ProviderBio = () => {
                 fontWeight={400}
                 px={0}
               >
-                Justina is a therapist of 15 years experience. Working in
-                international contexts, her background includes community health
-                care, paediatrics, and She works collaboratively with
-                individuals to address mental health concerns such as anxiety,
-                depression, work/stress issues, emotion regulation, trauma, OCD,
-                and other difficulties.
+                {bio}
               </AccordionPanel>
               <h2>
                 <AccordionButton
