@@ -7,8 +7,8 @@ import Providers from "./pages/Providers";
 
 function App() {
   // Samples of API requests
-  fetchProviders().then(console.log);
-  fetchProvider("1").then(console.log);
+  // fetchProviders().then(console.log);
+  // fetchProvider("1").then(console.log);
 
   const theme = useTheme();
 

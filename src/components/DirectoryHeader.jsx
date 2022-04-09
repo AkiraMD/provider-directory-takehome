@@ -19,6 +19,7 @@ import {
   Text,
   Tag,
   TagLabel,
+  Container,
 } from "@chakra-ui/react";
 
 const DirectoryHeader = () => {
@@ -31,12 +32,13 @@ const DirectoryHeader = () => {
       h={192}
       placeContent="center"
     >
-      <Flex
-        alignItems="center"
-        display="block"
-        justifyContent="space-between"
+      <Container
+        // alignItems="center"
+        // display="block"
+        // justifyContent="space-between"
         //   border="solid black"
-        pt="24px"
+        py="24px"
+        px="8px"
       >
         <Text
           color={theme.colors.neutral[900]}
@@ -90,7 +92,7 @@ const DirectoryHeader = () => {
         </Button>
       </Stack>
     </Flex> */}
-      </Flex>
+      </Container>
     </Flex>
   );
 };
