@@ -1,5 +1,43 @@
 import { useState, useEffect } from "react";
-import { fetchProvider } from "./api";
+import { fetchProvider, fetchProviders } from "./api";
+
+export const useProviders = () => {
+  const [providersRemoteData, setProvidersRemoteData] = useState({
+    data: [],
+    loading: false,
+    error: undefined,
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setProvidersRemoteData({
+        ...providersRemoteData,
+        loading: true,
+      });
+      fetchProviders()
+        .then((data) => {
+          setProvidersRemoteData({
+            ...providersRemoteData,
+            data: data,
+            loading: false,
+          });
+        })
+        .catch((error) => {
+          setProvidersRemoteData({
+            ...providersRemoteData,
+            error: error,
+            loading: false,
+          });
+        });
+    };
+    fetchData();
+  }, []);
+  return {
+    data: providersRemoteData.data,
+    loading: providersRemoteData.loading,
+    error: providersRemoteData.error,
+  };
+};
 
 export const useProvider = (providerId) => {
   const [providerRemoteData, setProviderRemote] = useState({
@@ -10,7 +48,6 @@ export const useProvider = (providerId) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      console.log("fetching!");
       setProviderRemote({
         ...providerRemoteData,
         loading: true,

@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Stack, Avatar, Text, useTheme, Badge } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 
-const ProviderView = ({ id, name, title, bio, availability }) => {
+const ProviderView = ({ id, name, title, bio, availability, image }) => {
   const theme = useTheme();
   const navigate = useNavigate();
 
@@ -27,8 +27,8 @@ const ProviderView = ({ id, name, title, bio, availability }) => {
         <Avatar
           w="56px"
           h="56px"
-          src={"https://avatars0.githubusercontent.com/u/1164541?v=4"}
-          alt={"Author"}
+          src={image ? image : "https://bit.ly/dan-abramov"}
+          alt={name}
           borderWidth={1}
           borderColor={theme.colors.neutral[300]}
         />
