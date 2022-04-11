@@ -14,7 +14,7 @@ const DirectoryHeader = () => {
   return (
     <Flex
       bgColor={theme.colors.neutral[0]}
-      px={20}
+      px={{ base: "20px", sm: "20px", md: 20 }}
       h={192}
       placeContent="center"
     >

@@ -59,7 +59,8 @@ const fullDataset = [
     id: "1",
     name: "Caroline Champagne",
     title: "MSW",
-    avatarUrl: "",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1648929556382-1cfc489d2abe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80",
     availabilty: "tomorrow",
     location: "Quebec City, Quebec",
     education: "Concordia University\n",
@@ -78,7 +79,8 @@ const fullDataset = [
     id: "2",
     name: "Tamara Childs",
     title: "MA, RCC",
-    avatarUrl: "",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1649007235345-aa5fad93f64a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
     availabilty: "next-week",
     location: "Toronto, Ontario",
     education: "University of Toronto",
@@ -99,7 +101,8 @@ const fullDataset = [
     id: "3",
     name: "Francois-Pierre Decoste",
     title: "MSW",
-    avatarUrl: "",
+    avatarUrl:
+      "https://images.unsplash.com/photo-1649130141773-e6b0b8acc2c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
     availabilty: "tomorrow",
     location: "Montreal, Quebec",
     education: "McGill",

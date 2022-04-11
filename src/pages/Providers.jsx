@@ -25,7 +25,7 @@ const Providers = () => {
       border={`1px solid ${theme.colors.neutral[400]}`}
     >
       <DirectoryHeader />
-      <Flex px={16} my="19px" placeContent="center">
+      <Flex px={{ base: 0, sm: 0, md: 16 }} my="19px" placeContent="center">
         <Container maxW="600px">
           {loading ? (
             <VStack spacing="6px">
