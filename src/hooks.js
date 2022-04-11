@@ -31,6 +31,7 @@ export const useProviders = () => {
         });
     };
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return {
     data: providersRemoteData.data,
@@ -69,6 +70,7 @@ export const useProvider = (providerId) => {
         });
     };
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return {
     data: providerRemoteData.data,

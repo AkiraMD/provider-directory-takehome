@@ -30,8 +30,8 @@ const Providers = () => {
           {loading ? (
             <VStack spacing="6px">
               <Skeleton height="20px" w="600px" mb="20px" />
-              {Array.from(Array(6)).map(() => (
-                <Skeleton height="160px" w="600px" />
+              {Array.from(Array(6)).map((i, idx) => (
+                <Skeleton key={`${idx}-${i}`} height="160px" w="600px" />
               ))}
             </VStack>
           ) : error ? (
@@ -44,6 +44,7 @@ const Providers = () => {
                 display="flex"
               >
                 <Text
+                  as="span"
                   fontWeight={500}
                   fontSize="14px"
                   color={theme.colors.neutral[900]}
@@ -56,6 +57,7 @@ const Providers = () => {
               <VStack spacing="6px" pt="20px">
                 {data.map((provider) => (
                   <ProviderView
+                    key={provider.id}
                     name={provider.name}
                     title={provider.title}
                     bio={provider.bio}

@@ -128,4 +128,49 @@ const fullDataset = [
       "personality disorder. He views therapy as a partnership and likes to work collaboratively with clients to find" +
       "what works for them. He often utilizes CBT, brief solution-focused, and narrative approaches to therapy.",
   },
+  {
+    id: "5",
+    name: "Marco DiCroce",
+    title: "MSW",
+    avatarUrl: "",
+    availabilty: "tomorrow",
+    location: "Toronto, Ontario",
+    education: "University of Toronto",
+    languages: ["English"],
+    bio:
+      "Marco is a Registered Social Worker. He has worked extensively in community mental health and has " +
+      "counselled individuals experiencing depression, anxiety, bipolar disorder, schizophrenia, and borderline " +
+      "personality disorder. He views therapy as a partnership and likes to work collaboratively with clients to find" +
+      "what works for them. He often utilizes CBT, brief solution-focused, and narrative approaches to therapy.",
+  },
+  {
+    id: "6",
+    name: "Marco DiCroce",
+    title: "MSW",
+    avatarUrl: "",
+    availabilty: "tomorrow",
+    location: "Toronto, Ontario",
+    education: "University of Toronto",
+    languages: ["English"],
+    bio:
+      "Marco is a Registered Social Worker. He has worked extensively in community mental health and has " +
+      "counselled individuals experiencing depression, anxiety, bipolar disorder, schizophrenia, and borderline " +
+      "personality disorder. He views therapy as a partnership and likes to work collaboratively with clients to find" +
+      "what works for them. He often utilizes CBT, brief solution-focused, and narrative approaches to therapy.",
+  },
+  {
+    id: "7",
+    name: "Marco DiCroce",
+    title: "MSW",
+    avatarUrl: "",
+    availabilty: "tomorrow",
+    location: "Toronto, Ontario",
+    education: "University of Toronto",
+    languages: ["English"],
+    bio:
+      "Marco is a Registered Social Worker. He has worked extensively in community mental health and has " +
+      "counselled individuals experiencing depression, anxiety, bipolar disorder, schizophrenia, and borderline " +
+      "personality disorder. He views therapy as a partnership and likes to work collaboratively with clients to find" +
+      "what works for them. He often utilizes CBT, brief solution-focused, and narrative approaches to therapy.",
+  },
 ];
