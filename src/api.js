@@ -33,23 +33,27 @@ export const fetchProvider = (providerId) => {
 export const fetchProviders = () => {
   return new Promise(
     (resolve) => setTimeout(
-      () => resolve(fullDataset.map(makePartialRepresentation)),
+      () => resolve(fullDataset.map(makeFullRepresentation)),
       REQUEST_RESPONSE_TIME
     )
   )
 };
 
-const makePartialRepresentation = ({id, name, title, avatarUrl, bio, availabilty}) => ({
-  id, name, title, avatarUrl, bio, availabilty
+const makePartialRepresentation = ({id, name, title, avatarUrl, bio, availability}) => ({
+  id, name, title, avatarUrl, bio, availability
 });
 
-const fullDataset = [
+const makeFullRepresentation = (props) => (
+  props
+);
+
+export const fullDataset = [
   {
     id: "1",
     name: "Caroline Champagne",
     title: "MSW",
-    avatarUrl: "",
-    availabilty: "tomorrow",
+    avatarUrl: "https://i.pravatar.cc/300",
+    availability: "tomorrow",
     location: "Quebec City, Quebec",
     education: "Concordia University\n",
     languages: ["French"],
@@ -66,8 +70,8 @@ const fullDataset = [
     id: "2",
     name: "Tamara Childs",
     title: "MA, RCC",
-    avatarUrl: "",
-    availabilty: "next-week",
+    avatarUrl: "https://i.pravatar.cc/300",
+    availability: "next-week",
     location: "Toronto, Ontario",
     education: "University of Toronto",
     languages: ["English"],
@@ -86,8 +90,8 @@ const fullDataset = [
     id: "3",
     name: "Francois-Pierre Decoste",
     title: "MSW",
-    avatarUrl: "",
-    availabilty: "tomorrow",
+    avatarUrl: "https://i.pravatar.cc/300",
+    availability: "tomorrow",
     location: "Montreal, Quebec",
     education: "McGill",
     languages: ["English", "French"],
@@ -100,8 +104,8 @@ const fullDataset = [
     id: "4",
     name: "Marco DiCroce",
     title: "MSW",
-    avatarUrl: "",
-    availabilty: "tomorrow",
+    avatarUrl: "https://i.pravatar.cc/300",
+    availability: "tomorrow",
     location: "Toronto, Ontario",
     education: "University of Toronto",
     languages: ["English"],

@@ -1,15 +1,15 @@
 import logo from './logo.svg'
+import React, { useState, useEffect } from 'react'
 import './App.css'
-import { fetchProviders, fetchProvider } from './api'
-import ProviderProfile from './container/ProviderDirectory' 
+import ProviderProfile from './container/ProviderDirectory'
+import Breadcrumbs from './component/Breadcrumbs'
+
 
 function App() {
-  // Samples of API requests
-  fetchProviders().then(console.log)
-  fetchProvider('1').then(console.log)
 
   return (
-    <div className='App bg-neutral-200'>
+    <div className='App bg-neutral-200 py-8'>
+      <Breadcrumbs />
       <ProviderProfile></ProviderProfile>
     </div>
   )
