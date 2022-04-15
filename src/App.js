@@ -9,7 +9,7 @@ function App() {
   fetchProvider('1').then(console.log)
 
   return (
-    <div className='App'>
+    <div className='App bg-neutral-200'>
       <ProviderProfile></ProviderProfile>
     </div>
   )
