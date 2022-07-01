@@ -1,8 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 import ProviderDirectory from './pages/ProviderDirectory';
 import ProviderProfile from './pages/ProviderProfile';
-import './App.css';
-import { fetchProviders, fetchProvider } from './api';
+import { fetchProviders, fetchProvider } from './lib/api';
 
 function App() {
   // Samples of API requests
@@ -10,12 +9,10 @@ function App() {
   fetchProvider('1').then(console.log);
 
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/providers" element={<ProviderDirectory />} />
-        <Route path="/providers/:providerId" element={<ProviderProfile />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/providers" element={<ProviderDirectory />} />
+      <Route path="/providers/:providerId" element={<ProviderProfile />} />
+    </Routes>
   );
 }
 
