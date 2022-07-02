@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.provider-directory-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: $neutral-0;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.05);
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 534px;
+  }
+
+  &__heading {
+    @include sub-heading-3($neutral-9);
+  }
+
+  &__sub-heading {
+    @include input-text-3($neutral-7);
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 10px 14px 10px 10px;
+    width: 69px;
+    height: 37px;
+    border: 1px solid $neutral-3;
+    border-radius: 94px;
+
+    &---text {
+      @include label-3($neutral-8);
+    }
+  }
+}
