@@ -1,8 +1,20 @@
+import { useState, useEffect } from 'react';
+import ProviderDirectoryHeader from '../components/providers/ProviderDirectoryHeader';
+import ProviderList from '../components/providers/ProviderList';
+import { fetchProviders } from '../lib/api';
+
 const ProviderDirectory = () => {
+  const [providers, setProviders] = useState([]);
+
+  useEffect(() => {
+    fetchProviders().then((result) => setProviders(result));
+  }, []);
+
   return (
-    <div>
-      <p>Provider Directory!</p>
-    </div>
+    <>
+      <ProviderDirectoryHeader />
+      <ProviderList providers={providers} />
+    </>
   );
 };
 

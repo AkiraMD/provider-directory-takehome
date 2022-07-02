@@ -1,11 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
 import ProviderDirectory from './pages/ProviderDirectory';
 import ProviderProfile from './pages/ProviderProfile';
-import { fetchProviders, fetchProvider } from './lib/api';
+import { fetchProvider } from './lib/api';
 
 function App() {
   // Samples of API requests
-  fetchProviders().then(console.log);
+  // fetchProviders().then(console.log);
   fetchProvider('1').then(console.log);
 
   return (
