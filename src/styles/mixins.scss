@@ -1,87 +1,100 @@
-$font-family: 'Helvetica Neue', sans-serif;
+/*******
+* TYPOGRAPHY
+*******/
 
 /* Sub-Heading */
-.sub-heading-1 {
+@mixin sub-heading-1($color) {
   font-weight: 400;
   font-size: 18px;
   line-height: 140%;
   letter-spacing: 0.005em;
+  color: $color;
 }
 
-.sub-heading-3 {
+@mixin sub-heading-3($color) {
   font-weight: 500;
   font-size: 24px;
   line-height: 120%;
   letter-spacing: 0.01em;
+  color: $color;
 }
 
 /* Body */
-.body-3 {
+@mixin body-3($color) {
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
   letter-spacing: 0.005em;
+  color: $color;
 }
 
 /* Button */
-.button-4 {
+@mixin button-4($color) {
   font-weight: 500;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0.02em;
+  color: $color;
 }
 
 /* Label */
-.label-3 {
+@mixin label-3($color) {
   font-weight: 500;
   font-size: 14px;
   line-height: 120%;
   letter-spacing: 0.01em;
+  color: $color;
 }
 
-.label-4 {
+@mixin label-4($color) {
   font-weight: 500;
   font-size: 14.8px;
   line-height: 120%;
   letter-spacing: 0.005em;
+  color: $color;
 }
 
-.label-5 {
+@mixin label-5($color) {
   font-weight: 500;
   font-size: 16px;
   line-height: 120%;
   letter-spacing: 0.005em;
+  color: $color;
 }
 
 /* Input Text */
-.input-text-1 {
+@mixin input-text-1($color) {
   font-weight: 400;
   font-size: 12px;
   line-height: 120%;
   letter-spacing: 0.02em;
+  color: $color;
 }
 
-.input-text-2 {
+@mixin input-text-2($color) {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 120%;
   letter-spacing: 0.02em;
+  color: $color;
 }
 
-.input-text-3 {
+@mixin input-text-3($color) {
   font-style: normal;
   font-weight: 400;
   font-size: 14.8px;
   line-height: 120%;
   letter-spacing: 0.01em;
+  color: $color;
 }
 
 /* Badge */
-.badge-2 {
+@mixin badge-2($color) {
   font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 110%;
   letter-spacing: 0.02em;
+  color: $color;
 }
