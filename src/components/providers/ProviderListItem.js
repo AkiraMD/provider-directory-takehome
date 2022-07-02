@@ -8,7 +8,7 @@ const ProviderListItem = ({ provider }) => {
 
   return (
     <li className="providers__item">
-      <Link to={`/provider/${id}`}>
+      <Link to={`/providers/${id}`}>
         <div className="providers__item--profile">
           <ProviderImage src={avatarUrl} size="small" />
           {/* Potential to make provider heading a component */}
