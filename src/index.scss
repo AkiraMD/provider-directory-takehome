@@ -1,0 +1,15 @@
+@import 'styles/colors.scss';
+@import 'styles/typography.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family;
+  font-style: normal;
+  background-color: $neutral-4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
