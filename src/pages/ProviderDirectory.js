@@ -1,4 +1,5 @@
 import ProviderDirectoryHeader from '../components/providers/ProviderDirectoryHeader';
+import ProviderList from '../components/providers/ProviderList';
 import { fetchProviders } from '../lib/api';
 
 const ProviderDirectory = () => {
@@ -10,6 +11,7 @@ const ProviderDirectory = () => {
       <p>
         <span>17</span> providers in Ontario
       </p>
+      <ProviderList />
     </div>
   );
 };
