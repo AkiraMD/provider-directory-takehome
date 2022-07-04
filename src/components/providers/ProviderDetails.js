@@ -17,7 +17,6 @@ const ProviderDetails = ({ provider }) => {
         <p className="provider__designation">Registered Social Worker</p>
         <ProviderBio bio={provider.bio} />
       </Card>
-      {/* Divider */}
       <hr />
       {/* Bottom Profile Section */}
       <Card>
@@ -26,7 +25,12 @@ const ProviderDetails = ({ provider }) => {
           education={provider.education}
           languages={provider.languages}
         />
-        <Button>Book with us</Button>
+        <Button
+          size="xLarge"
+          onClick={() => console.log('Book an appointment!')}
+        >
+          Book with us
+        </Button>
       </Card>
     </div>
   );
