@@ -17,7 +17,9 @@ const ProviderListItem = ({ provider }) => {
               {name}, {title}
             </h3>
             {/* Figure out where title below comes from */}
-            <p className="providers__item--title">Registered Social Worker</p>
+            <p className="providers__item--designation">
+              Registered Social Worker
+            </p>
           </div>
         </div>
 

@@ -9,6 +9,8 @@
 
   &__total {
     @include input-text-2($neutral-8);
+    margin-top: 19px;
+    margin-bottom: 22px;
   }
 
   &__number {
