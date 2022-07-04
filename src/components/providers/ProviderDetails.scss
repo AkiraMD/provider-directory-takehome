@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.profile__details {
+  margin-left: 20px;
+
+  .provider__name {
+    @include sub-heading-1($neutral-9);
+  }
+
+  .provider__designation {
+    @include label-3($neutral-7);
+    margin-top: 6px;
+  }
+
+  hr {
+    margin: 0;
+    border: none;
+    height: 1px;
+    background-color: $neutral-3;
+  }
+}

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import ProviderImage from './ProviderImage';
-import Badge from '../UI/badge/Badge';
+import Badge from '../UI/Badge';
 import './ProviderListItem.scss';
 
 const ProviderListItem = ({ provider }) => {
@@ -8,7 +8,7 @@ const ProviderListItem = ({ provider }) => {
 
   return (
     <li className="providers__item">
-      <Link to={`/provider/${id}`}>
+      <Link to={`/providers/${id}`}>
         <div className="providers__item--profile">
           <ProviderImage src={avatarUrl} size="small" />
           {/* Potential to make provider heading a component */}
@@ -17,7 +17,9 @@ const ProviderListItem = ({ provider }) => {
               {name}, {title}
             </h3>
             {/* Figure out where title below comes from */}
-            <p className="providers__item--title">Registered Social Worker</p>
+            <p className="providers__item--designation">
+              Registered Social Worker
+            </p>
           </div>
         </div>
 
