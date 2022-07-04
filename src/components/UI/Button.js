@@ -1,10 +1,10 @@
 import './Button.scss';
 
-const Button = (props) => {
+const Button = ({ size, onClick, children }) => {
   return (
-    <button className="button">
+    <button className={`button ${size}`} onClick={onClick}>
       {/* Variable button text by rendering children prop as text */}
-      <span>{props.children}</span>
+      <span>{children}</span>
     </button>
   );
 };

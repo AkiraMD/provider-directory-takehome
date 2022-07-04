@@ -5,17 +5,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
   width: 100%;
-  height: 54px;
-  padding: 18px 32px;
-
-  border: none;
   border-radius: 2000px;
   background-color: transparent;
-  background: $thvc-purple-5;
-
+  background: $neutral-9;
   cursor: pointer;
+
+  &.xLarge {
+    border: none;
+    padding: 18px 32px;
+    background: $thvc-purple-5;
+  }
 
   span {
     @include button-4($neutral-0);
