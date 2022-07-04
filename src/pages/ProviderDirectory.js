@@ -5,6 +5,7 @@ import { fetchProviders } from '../lib/api';
 
 const ProviderDirectory = () => {
   const [providers, setProviders] = useState([]);
+  const [location, setLocation] = useState('Ontario');
 
   useEffect(() => {
     fetchProviders().then((result) => setProviders(result));
