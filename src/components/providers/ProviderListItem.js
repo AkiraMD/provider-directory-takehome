@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import ProviderImage from './ProviderImage';
-import Badge from '../UI/badge/Badge';
+import Badge from '../UI/Badge';
 import './ProviderListItem.scss';
 
 const ProviderListItem = ({ provider }) => {
