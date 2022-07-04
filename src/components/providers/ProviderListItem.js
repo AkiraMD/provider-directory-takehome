@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import ProviderImage from './ProviderImage';
-import Badge from '../UI/Badge';
+import Label from '../UI/Label';
 import './ProviderListItem.scss';
 
 const ProviderListItem = ({ provider }) => {
@@ -25,7 +25,7 @@ const ProviderListItem = ({ provider }) => {
 
         <div className="providers__item--bio">{bio}</div>
 
-        <Badge>Available {availability}</Badge>
+        <Label variant="availability">Available {availability}</Label>
       </Link>
     </li>
   );
