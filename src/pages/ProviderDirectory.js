@@ -1,20 +1,18 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import ProviderDirectoryHeader from '../components/providers/ProviderDirectoryHeader';
 import ProviderList from '../components/providers/ProviderList';
-import { fetchProviders } from '../lib/api';
+import LoadingSpinner from '../components/UI/LoadingSpinner';
+import useProviders from '../hooks/useProviders';
+import './ProviderDirectory.scss';
 
 const ProviderDirectory = () => {
-  const [providers, setProviders] = useState([]);
+  const { providers, loading } = useProviders();
   const [location, setLocation] = useState('Ontario');
-
-  useEffect(() => {
-    fetchProviders().then((result) => setProviders(result));
-  }, []);
 
   return (
     <>
       <ProviderDirectoryHeader />
-      <ProviderList providers={providers} />
+      {loading ? <LoadingSpinner /> : <ProviderList providers={providers} />}
     </>
   );
 };
