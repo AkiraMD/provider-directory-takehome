@@ -9,7 +9,6 @@
   width: 69px;
   height: 37px;
 
-  // padding: 10px 16px;
   padding: 10px 16px 10px 14px;
 
   border: 1px solid $neutral-3;
@@ -18,4 +17,6 @@
   background: $neutral-0;
 
   @include label-3($neutral-8);
+
+  cursor: pointer;
 }
