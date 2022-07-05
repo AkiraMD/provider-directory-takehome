@@ -45,6 +45,7 @@ const makePartialRepresentation = ({
   avatarUrl,
   bio,
   availability,
+  location,
 }) => ({
   id,
   name,
@@ -52,6 +53,7 @@ const makePartialRepresentation = ({
   avatarUrl,
   bio,
   availability,
+  location,
 });
 
 const fullDataset = [
