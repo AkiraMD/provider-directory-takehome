@@ -7,13 +7,27 @@ import './ProviderDirectory.scss';
 
 const ProviderDirectory = () => {
   const { providers, loading } = useProviders();
-  const [location, setLocation] = useState('Ontario');
+  const [selectedLocation, setSelectedLocation] = useState('Ontario');
+
+  const providersByLocation = providers.filter(({ location }) => {
+    return location.split(',')[1].trim() === selectedLocation;
+  });
 
   return (
-    <>
-      <ProviderDirectoryHeader />
-      {loading ? <LoadingSpinner /> : <ProviderList providers={providers} />}
-    </>
+    <main className="directory">
+      <ProviderDirectoryHeader
+        location={selectedLocation}
+        setLocation={setSelectedLocation}
+      />
+      {loading ? (
+        <LoadingSpinner />
+      ) : (
+        <ProviderList
+          providers={providersByLocation}
+          location={selectedLocation}
+        />
+      )}
+    </main>
   );
 };
 

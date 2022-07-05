@@ -1,13 +1,10 @@
 import ProviderListItem from './ProviderListItem';
 import './ProviderList.scss';
 
-const ProviderList = ({ providers }) => {
+const ProviderList = ({ providers, location }) => {
   // TO DO: filter providers based on location
   // TO DO: format this properly based on amount of providers
   const numberOfProviders = providers.length;
-
-  // TO DO: dynamically load location
-  const location = 'Ontario';
 
   const providersList = providers.map((provider) => {
     return <ProviderListItem key={provider.id} provider={provider} />;
