@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { fetchProviders } from '../lib/api';
 
 const useProviders = () => {
-  const [providers, setProviders] = useState({
-    data: [],
+  const [state, setState] = useState({
+    providers: [],
     loading: true,
     error: undefined,
   });
@@ -11,17 +11,17 @@ const useProviders = () => {
   useEffect(() => {
     fetchProviders()
       .then((result) => {
-        setProviders((prev) => ({ ...prev, data: result, loading: false }));
+        setState((prev) => ({ ...prev, providers: result, loading: false }));
       })
       .catch((error) => {
-        setProviders((prev) => ({ ...prev, error: error, loading: false }));
+        setState((prev) => ({ ...prev, error: error, loading: false }));
       });
   }, []);
 
   return {
-    providers: providers.data,
-    loading: providers.loading,
-    error: providers.error,
+    providers: state.providers,
+    loading: state.loading,
+    error: state.error,
   };
 };
 
