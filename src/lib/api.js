@@ -45,6 +45,8 @@ const makePartialRepresentation = ({
   avatarUrl,
   bio,
   availability,
+  location,
+  designation,
 }) => ({
   id,
   name,
@@ -52,6 +54,8 @@ const makePartialRepresentation = ({
   avatarUrl,
   bio,
   availability,
+  location,
+  designation,
 });
 
 const fullDataset = [
@@ -59,6 +63,7 @@ const fullDataset = [
     id: '1',
     name: 'Caroline Champagne',
     title: 'MSW',
+    designation: 'Registered Social Worker',
     avatarUrl: '',
     availability: 'tomorrow',
     location: 'Quebec City, Quebec',
@@ -78,6 +83,7 @@ const fullDataset = [
     id: '2',
     name: 'Tamara Childs',
     title: 'MA, RCC',
+    designation: 'Registered Clinical Counsellor',
     avatarUrl: '',
     availability: 'next-week',
     location: 'Toronto, Ontario',
@@ -99,6 +105,7 @@ const fullDataset = [
     id: '3',
     name: 'Francois-Pierre Decoste',
     title: 'MSW',
+    designation: 'Registered Social Worker',
     avatarUrl: '',
     availability: 'tomorrow',
     location: 'Montreal, Quebec',
@@ -114,6 +121,7 @@ const fullDataset = [
     id: '4',
     name: 'Marco DiCroce',
     title: 'MSW',
+    designation: 'Registered Social Worker',
     avatarUrl: '',
     availability: 'tomorrow',
     location: 'Toronto, Ontario',

@@ -4,7 +4,8 @@ import Label from '../UI/Label';
 import './ProviderListItem.scss';
 
 const ProviderListItem = ({ provider }) => {
-  const { id, availability, avatarUrl, bio, name, title } = provider;
+  const { id, avatarUrl, name, title, designation, bio, availability } =
+    provider;
 
   return (
     <li className="providers__item">
@@ -16,10 +17,7 @@ const ProviderListItem = ({ provider }) => {
             <h3 className="providers__item--name">
               {name}, {title}
             </h3>
-            {/* Figure out where title below comes from */}
-            <p className="providers__item--designation">
-              Registered Social Worker
-            </p>
+            <p className="providers__item--designation">{designation}</p>
           </div>
         </div>
 

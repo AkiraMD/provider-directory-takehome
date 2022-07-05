@@ -6,29 +6,33 @@ import Button from '../UI/Button';
 import './ProviderDetails.scss';
 
 const ProviderDetails = ({ provider }) => {
+  const { name, title, designation, bio, location, education, languages } =
+    provider;
+
+  const bookAppointment = () => {
+    console.log('Book an appointment!');
+  };
+
   return (
     <div className="profile__details">
       {/* Top Profile Section */}
       <Card>
         <h3 className="provider__name">
-          {provider.name}, {provider.title}
+          {name}, {title}
         </h3>
         {/* Figure out where title below comes from */}
-        <p className="provider__designation">Registered Social Worker</p>
-        <ProviderBio bio={provider.bio} />
+        <p className="provider__designation">{designation}</p>
+        <ProviderBio bio={bio} />
       </Card>
       <hr />
       {/* Bottom Profile Section */}
       <Card>
         <ProviderStatList
-          location={provider.location}
-          education={provider.education}
-          languages={provider.languages}
+          location={location}
+          education={education}
+          languages={languages}
         />
-        <Button
-          size="xLarge"
-          onClick={() => console.log('Book an appointment!')}
-        >
+        <Button size="xLarge" onClick={bookAppointment}>
           Book with us
         </Button>
       </Card>
