@@ -14,11 +14,11 @@
     border-radius: 50%;
     border: 6px solid $neutral-4;
     border-color: $state-blue $neutral-5 $neutral-5 $neutral-5;
-    animation: spinner 1.2s linear infinite;
+    animation: spinner 1s linear infinite;
   }
 }
 
-.centered {
+.loading-container {
   display: flex;
   align-items: center;
   justify-content: center;
