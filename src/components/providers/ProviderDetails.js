@@ -10,7 +10,7 @@ const ProviderDetails = ({ provider }) => {
     provider;
 
   const bookAppointment = () => {
-    console.log('Book an appointment!');
+    alert('Book an appointment!');
   };
 
   return (

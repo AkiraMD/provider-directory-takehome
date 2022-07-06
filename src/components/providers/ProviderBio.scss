@@ -17,4 +17,5 @@
 
 .read-more {
   @include label-4($secondary-5);
+  cursor: pointer;
 }
