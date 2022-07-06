@@ -1,6 +1,6 @@
-import './Navigation.scss';
+import './NavigationLabel.scss';
 
-const Navigation = ({ variant, children }) => {
+const NavigationLabel = ({ variant, children }) => {
   return (
     <label className="navigation">
       {/* Variable button text by rendering children prop as text */}
@@ -9,4 +9,4 @@ const Navigation = ({ variant, children }) => {
   );
 };
 
-export default Navigation;
+export default NavigationLabel;

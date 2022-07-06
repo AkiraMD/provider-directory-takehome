@@ -18,7 +18,7 @@ const ProviderList = ({ providers, location }) => {
           <span className="providers__number">{numberOfProviders}</span>{' '}
           {pluralizedProvidersText}
         </p>
-        <ul className="providers__list">{providersList}</ul>
+        <ul>{providersList}</ul>
       </div>
     </section>
   );

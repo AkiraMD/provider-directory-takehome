@@ -1,5 +1,5 @@
-import './Dropdown.scss';
 import { useState } from 'react';
+import './Dropdown.scss';
 
 const Dropdown = ({ icon, defaultValue, options, onChange }) => {
   const [value, setValue] = useState(defaultValue); // controlled input pattern

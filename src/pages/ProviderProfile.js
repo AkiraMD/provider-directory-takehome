@@ -11,12 +11,12 @@ const ProviderProfile = () => {
   const { providerId } = useParams();
   const { provider, loading, error } = useProvider(providerId);
 
-  /* Loading */
+  /* Loading State */
   if (loading) {
     return <LoadingSpinner />;
   }
 
-  /* Error */
+  /* Error State */
   if (error) {
     return <Error message={error} />;
   }

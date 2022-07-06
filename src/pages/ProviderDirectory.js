@@ -14,12 +14,12 @@ const ProviderDirectory = () => {
   /* Filter list of of providers for the current location */
   const providersByLocation = getProvidersByLocation(providers, location);
 
-  /* Loading */
+  /* Loading State */
   if (loading) {
     return <LoadingSpinner />;
   }
 
-  /* Error */
+  /* Error State */
   if (error) {
     return <Error message={error} />;
   }

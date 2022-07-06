@@ -23,3 +23,12 @@ export function getProviderText(amountOfProviders, location) {
 
   return `providers in ${location}`;
 }
+
+/**
+ * Format list of languages
+ * @param {[{}]} languages An array of languages
+ * @return {String} Formatted string with correct punctuation for multiple languages
+ */
+export function getAllLanguages(languages) {
+  return languages && languages.length > 1 ? languages.join(', ') : languages;
+}

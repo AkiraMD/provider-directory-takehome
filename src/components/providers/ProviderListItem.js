@@ -12,17 +12,14 @@ const ProviderListItem = ({ provider }) => {
       <Link to={`/providers/${id}`}>
         <div className="providers__item--profile">
           <ProviderImage src={avatarUrl} size="small" />
-          {/* Potential to make provider heading a component */}
           <div className="providers__item--header">
-            <h3 className="providers__item--name">
+            <h2 className="providers__item--name">
               {name}, {title}
-            </h3>
+            </h2>
             <p className="providers__item--designation">{designation}</p>
           </div>
         </div>
-
         <div className="providers__item--bio">{bio}</div>
-
         <Label variant="availability">Available {availability}</Label>
       </Link>
     </li>
