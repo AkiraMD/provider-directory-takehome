@@ -3,7 +3,7 @@ import { fetchProvider } from '../lib/api';
 
 const useProvider = (providerId) => {
   const [state, setState] = useState({
-    provider: [],
+    provider: undefined,
     loading: true,
     error: undefined,
   });
