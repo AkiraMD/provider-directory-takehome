@@ -3,11 +3,14 @@ import ProviderBio from './ProviderBio';
 import ProviderStatsList from './ProviderStatsList';
 import Button from '../UI/Button';
 import Divider from '../UI/Divider';
+import { formatProviderHeading } from '../../helpers/utils';
 import './ProviderDetails.scss';
 
 const ProviderDetails = ({ provider }) => {
   const { name, title, designation, bio, location, education, languages } =
     provider;
+
+  const providerHeading = formatProviderHeading(name, title);
 
   const bookAppointment = () => {
     alert('Book an appointment!');
@@ -17,9 +20,7 @@ const ProviderDetails = ({ provider }) => {
     <div className="profile__details">
       {/* Top Profile Section */}
       <Card>
-        <h3 className="provider__name">
-          {name}, {title}
-        </h3>
+        <h3 className="provider__heading">{providerHeading}</h3>
         <p className="provider__designation">{designation}</p>
         <ProviderBio bio={bio} />
       </Card>

@@ -1,4 +1,14 @@
 /**
+ * Combine name and title of provider
+ * @param {String} name A provider name.
+ * @param {String} title A provider title.
+ * @return {String} Name with the title.
+ */
+export function formatProviderHeading(name, title) {
+  return `${name}, ${title}`;
+}
+
+/**
  * Format location options for dropdown list
  * @param {[{}]} locations An array of available locations.
  * @return {[]} An array of locations formatted for dropdown use.
