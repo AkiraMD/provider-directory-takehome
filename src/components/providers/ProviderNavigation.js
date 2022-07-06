@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import ArrowRight from '../../assets/icons/arrow-right.svg';
+import ArrowRight from '../../assets/icons/arrow-right.png';
 import './ProviderNavigation.scss';
 
 const ProviderNavigation = ({ name, title }) => {

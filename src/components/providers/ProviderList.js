@@ -1,10 +1,11 @@
 import ProviderListItem from './ProviderListItem';
+import { getProviderText } from '../../helpers/formatters';
 import './ProviderList.scss';
 
 const ProviderList = ({ providers, location }) => {
-  // TO DO: filter providers based on location
-  // TO DO: format this properly based on amount of providers
   const numberOfProviders = providers.length;
+
+  const pluralizedProvidersText = getProviderText(numberOfProviders, location);
 
   const providersList = providers.map((provider) => {
     return <ProviderListItem key={provider.id} provider={provider} />;
@@ -15,9 +16,9 @@ const ProviderList = ({ providers, location }) => {
       <div className="providers__container">
         <p className="providers__total">
           <span className="providers__number">{numberOfProviders}</span>{' '}
-          providers in {location}
+          {pluralizedProvidersText}
         </p>
-        <ul className="providers__list">{providersList}</ul>
+        <ul>{providersList}</ul>
       </div>
     </section>
   );

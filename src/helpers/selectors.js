@@ -1,9 +1,11 @@
 /**
- * Get all unique provider locations
+ * Get all providers for a given location.
  * @param {[{}]} providers An array of providers.
- * @return {[]}  An array of unique locations. Empty array if nothing found.
+ * @param {String} location The selected location.
+ * @return {[]} A filtered array of providers for the given location.
  */
-export function getUniqueLocations() {
-  //stackoverflow.com/a/14438954
-  return ['Ontario', 'Quebec'];
+export function getProvidersByLocation(providers, selectedLocation) {
+  return providers.filter(({ location }) => {
+    return location.split(',')[1].trim() === selectedLocation;
+  });
 }

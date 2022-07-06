@@ -1,6 +1,6 @@
-import './ProviderStatItem.scss';
+import './ProviderStatsListItem.scss';
 
-const ProviderStatItem = ({ icon, label, data }) => {
+const ProviderStatsListItem = ({ icon, label, data }) => {
   return (
     <div className="provider-stat__item">
       <img src={icon} alt={`${label} icon`} />
@@ -12,4 +12,4 @@ const ProviderStatItem = ({ icon, label, data }) => {
   );
 };
 
-export default ProviderStatItem;
+export default ProviderStatsListItem;

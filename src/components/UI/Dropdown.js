@@ -1,7 +1,7 @@
-import './Dropdown.scss';
 import { useState } from 'react';
+import './Dropdown.scss';
 
-const Dropdown = ({ icon, defaultValue, onChange }) => {
+const Dropdown = ({ icon, defaultValue, options, onChange }) => {
   const [value, setValue] = useState(defaultValue); // controlled input pattern
 
   const onChangeHandler = (event) => {
@@ -9,13 +9,7 @@ const Dropdown = ({ icon, defaultValue, onChange }) => {
     onChange(event.target.value);
   };
 
-  // TO DO: refactor into helper function
-  const arrayOfOptions = [
-    { value: 'Ontario', label: 'ON' },
-    { value: 'Quebec', label: 'QC' },
-  ];
-
-  const options = arrayOfOptions.map((option) => (
+  const optionsList = options.map((option) => (
     <option key={option.label} value={option.value}>
       {option.label}
     </option>
@@ -23,9 +17,9 @@ const Dropdown = ({ icon, defaultValue, onChange }) => {
 
   return (
     <>
-      <img src={icon} alt="dropdown-icon" />
+      <img src={icon} className="dropdown-icon" alt="dropdown-icon" />
       <select value={value} onChange={onChangeHandler}>
-        {options}
+        {optionsList}
       </select>
     </>
   );

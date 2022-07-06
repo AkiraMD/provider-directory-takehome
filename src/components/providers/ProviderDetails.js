@@ -1,8 +1,8 @@
 import Card from '../UI/Card';
 import ProviderBio from './ProviderBio';
-import ProviderStatList from './ProviderStatList';
+import ProviderStatsList from './ProviderStatsList';
 import Button from '../UI/Button';
-
+import Divider from '../UI/Divider';
 import './ProviderDetails.scss';
 
 const ProviderDetails = ({ provider }) => {
@@ -10,7 +10,7 @@ const ProviderDetails = ({ provider }) => {
     provider;
 
   const bookAppointment = () => {
-    console.log('Book an appointment!');
+    alert('Book an appointment!');
   };
 
   return (
@@ -20,14 +20,14 @@ const ProviderDetails = ({ provider }) => {
         <h3 className="provider__name">
           {name}, {title}
         </h3>
-        {/* Figure out where title below comes from */}
         <p className="provider__designation">{designation}</p>
         <ProviderBio bio={bio} />
       </Card>
-      <hr />
+      {/* Divider */}
+      <Divider />
       {/* Bottom Profile Section */}
       <Card>
-        <ProviderStatList
+        <ProviderStatsList
           location={location}
           education={education}
           languages={languages}

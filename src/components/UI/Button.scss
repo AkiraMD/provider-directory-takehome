@@ -17,6 +17,10 @@
     background: $thvc-purple-5;
   }
 
+  &.xLarge:hover {
+    background: $thvc-purple-4;
+  }
+
   span {
     @include button-4($neutral-0);
   }

@@ -3,15 +3,22 @@ import ProviderNavigation from '../components/providers/ProviderNavigation';
 import ProviderImage from '../components/providers/ProviderImage';
 import ProviderDetails from '../components/providers/ProviderDetails';
 import LoadingSpinner from '../components/UI/LoadingSpinner';
+import Error from '../components/UI/Error';
 import useProvider from '../hooks/useProvider';
 import './ProviderProfile.scss';
 
 const ProviderProfile = () => {
   const { providerId } = useParams();
-  const { provider, loading } = useProvider(providerId);
+  const { provider, loading, error } = useProvider(providerId);
 
+  /* Loading State */
   if (loading) {
     return <LoadingSpinner />;
+  }
+
+  /* Error State */
+  if (error) {
+    return <Error message={error} />;
   }
 
   return (
