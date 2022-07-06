@@ -2,7 +2,7 @@ import Navigation from '../UI/Navigation';
 import Dropdown from '../UI/Dropdown';
 import { getLocationOptions } from '../../helpers/formatters';
 import { availableLocations } from '../../constants/locationConstants';
-import LocationPin from '../../assets/icons/location-pin.svg';
+import LocationPin from '../../assets/icons/location-pin.png';
 import './ProviderDirectoryHeader.scss';
 
 const ProviderListHeader = ({ location, updateLocation }) => {

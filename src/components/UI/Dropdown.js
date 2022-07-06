@@ -17,7 +17,7 @@ const Dropdown = ({ icon, defaultValue, options, onChange }) => {
 
   return (
     <>
-      <img src={icon} alt="dropdown-icon" />
+      <img src={icon} className="dropdown-icon" alt="dropdown-icon" />
       <select value={value} onChange={onChangeHandler}>
         {optionsList}
       </select>
