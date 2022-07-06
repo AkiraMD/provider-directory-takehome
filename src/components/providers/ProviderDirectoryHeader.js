@@ -3,7 +3,7 @@ import Dropdown from '../UI/Dropdown';
 import './ProviderDirectoryHeader.scss';
 import LocationPin from '../../assets/icons/location-pin.svg';
 
-const ProviderListHeader = ({ location, setLocation }) => {
+const ProviderListHeader = ({ location, updateLocation }) => {
   return (
     <header className="directory-header">
       <div className="directory-header__container">
@@ -14,7 +14,7 @@ const ProviderListHeader = ({ location, setLocation }) => {
           <Dropdown
             icon={LocationPin}
             defaultValue={location}
-            onChange={setLocation}
+            onChange={updateLocation}
           />
         </Navigation>
       </div>

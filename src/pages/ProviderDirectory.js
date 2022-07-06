@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import ProviderDirectoryHeader from '../components/providers/ProviderDirectoryHeader';
 import ProviderList from '../components/providers/ProviderList';
 import LoadingSpinner from '../components/UI/LoadingSpinner';
@@ -7,25 +6,21 @@ import { getProvidersByLocation } from '../helpers/selectors';
 import './ProviderDirectory.scss';
 
 const ProviderDirectory = () => {
-  const { providers, loading } = useProviders();
-  const [selectedLocation, setSelectedLocation] = useState('Ontario');
+  const { providers, location, setLocation, loading } = useProviders();
 
   // Filter list of of providers for the current location
-  const providersByLocation = getProvidersByLocation(providers, selectedLocation);
+  const providersByLocation = getProvidersByLocation(providers, location);
 
   return (
     <main className="directory">
       <ProviderDirectoryHeader
-        location={selectedLocation}
-        setLocation={setSelectedLocation}
+        location={location}
+        updateLocation={setLocation}
       />
       {loading ? (
         <LoadingSpinner />
       ) : (
-        <ProviderList
-          providers={providersByLocation}
-          location={selectedLocation}
-        />
+        <ProviderList providers={providersByLocation} location={location} />
       )}
     </main>
   );

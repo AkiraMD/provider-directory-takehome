@@ -4,6 +4,7 @@ import { fetchProviders } from '../lib/api';
 const useProviders = () => {
   const [state, setState] = useState({
     providers: [],
+    location: 'Ontario',
     loading: true,
     error: undefined,
   });
@@ -18,10 +19,16 @@ const useProviders = () => {
       });
   }, []);
 
+  const setLocation = (location) => {
+    setState((prev) => ({ ...prev, location }));
+  };
+
   return {
     providers: state.providers,
+    location: state.location,
     loading: state.loading,
     error: state.error,
+    setLocation,
   };
 };
 
