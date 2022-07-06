@@ -1,9 +1,13 @@
 import Navigation from '../UI/Navigation';
 import Dropdown from '../UI/Dropdown';
-import './ProviderDirectoryHeader.scss';
+import { getLocationOptions } from '../../helpers/formatters';
+import { availableLocations } from '../../constants/locationConstants';
 import LocationPin from '../../assets/icons/location-pin.svg';
+import './ProviderDirectoryHeader.scss';
 
 const ProviderListHeader = ({ location, updateLocation }) => {
+  const locationOptions = getLocationOptions(availableLocations);
+
   return (
     <header className="directory-header">
       <div className="directory-header__container">
@@ -14,6 +18,7 @@ const ProviderListHeader = ({ location, updateLocation }) => {
           <Dropdown
             icon={LocationPin}
             defaultValue={location}
+            options={locationOptions}
             onChange={updateLocation}
           />
         </Navigation>

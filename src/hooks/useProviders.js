@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { fetchProviders } from '../lib/api';
 
-const useProviders = () => {
+const useProviders = (location) => {
   const [state, setState] = useState({
     providers: [],
-    location: 'Ontario',
+    location: location,
     loading: true,
     error: undefined,
   });
