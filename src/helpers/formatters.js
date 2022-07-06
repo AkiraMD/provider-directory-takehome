@@ -9,3 +9,17 @@ export function getLocationOptions(locations) {
     label: location.abbrev,
   }));
 }
+
+/**
+ * Format and pluralize providers text
+ * @param {Number} amountOfProviders Number of providers.
+ * @param {String} location A selected location.
+ * @return {String} Formatted string with correct pluralization.
+ */
+export function getProviderText(amountOfProviders, location) {
+  if (amountOfProviders === 1) {
+    return `provider in ${location}`;
+  }
+
+  return `providers in ${location}`;
+}
