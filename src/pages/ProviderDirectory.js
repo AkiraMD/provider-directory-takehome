@@ -3,15 +3,15 @@ import ProviderDirectoryHeader from '../components/providers/ProviderDirectoryHe
 import ProviderList from '../components/providers/ProviderList';
 import LoadingSpinner from '../components/UI/LoadingSpinner';
 import useProviders from '../hooks/useProviders';
+import { getProvidersByLocation } from '../helpers/selectors';
 import './ProviderDirectory.scss';
 
 const ProviderDirectory = () => {
   const { providers, loading } = useProviders();
   const [selectedLocation, setSelectedLocation] = useState('Ontario');
 
-  const providersByLocation = providers.filter(({ location }) => {
-    return location.split(',')[1].trim() === selectedLocation;
-  });
+  // Filter list of of providers for the current location
+  const providersByLocation = getProvidersByLocation(providers, selectedLocation);
 
   return (
     <main className="directory">
