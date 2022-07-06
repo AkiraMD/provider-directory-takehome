@@ -1,29 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-import {fetchProviders, fetchProvider} from "./api";
+import { fetchProviders } from './api';
+import { useState, useEffect } from 'react';
+import { ProviderFull } from './components/ProviderFull';
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { ProviderList } from './components/ProvidersList';
 
 function App() {
-  // Samples of API requests
-  fetchProviders().then(console.log)
-  fetchProvider("1").then(console.log)
+  const [providers, setProviders] = useState([]);
+
+  useEffect(() => {
+    fetchProviders().then((data) => setProviders(data));
+  }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/provider/:providerId"
+            element={<ProviderFull />}
+          />
+          <Route
+            path="/"
+            element={<ProviderList providers={providers} />}
+          />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
