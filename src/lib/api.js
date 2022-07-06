@@ -1,9 +1,9 @@
 // This file contains the two API functions which you'll use: fetchProviders, and fetchProviders
 
 /**
- * We are mimicking a REST request here, so it takes a half sec to respond
+ * We are mimicking a REST request here, so it takes a sec to respond
  */
-const REQUEST_RESPONSE_TIME = 500;
+const REQUEST_RESPONSE_TIME = 1000;
 
 /**
  * Fetch a a given provider by ID, and get the complete representation
