@@ -26,7 +26,7 @@ const ProviderProfile = () => {
       <div className="profile__container">
         <ProviderNavigation name={provider.name} title={provider.title} />
         <div className="profile__overview">
-          <ProviderImage size="large" url={provider.avatarUrl} />
+          <ProviderImage avatarUrl={provider.avatarUrl} size="large" />
           <ProviderInfo provider={provider} />
         </div>
       </div>

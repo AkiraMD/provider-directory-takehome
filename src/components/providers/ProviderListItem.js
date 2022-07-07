@@ -14,7 +14,7 @@ const ProviderListItem = ({ provider }) => {
     <li className="providers__item">
       <Link to={`/providers/${id}`}>
         <div className="providers__item--profile">
-          <ProviderImage src={avatarUrl} size="small" />
+          <ProviderImage avatarUrl={avatarUrl} size="small" />
           <div className="providers__item--header">
             <h2 className="providers__item--heading">{providerHeading}</h2>
             <p className="providers__item--designation">{designation}</p>
