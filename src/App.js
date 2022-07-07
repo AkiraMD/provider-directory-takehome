@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import ProviderDirectory from './pages/ProviderDirectory';
-import ProviderProfile from './pages/ProviderProfile';
+import ProviderDirectory from './pages/ProviderDirectory/ProviderDirectory';
+import ProviderProfile from './pages/ProviderProfile/ProviderProfile';
 
 function App() {
   return (

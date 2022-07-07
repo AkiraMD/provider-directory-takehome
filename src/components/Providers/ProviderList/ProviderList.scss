@@ -1,0 +1,23 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.providers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+
+  &__container {
+    width: 598px;
+  }
+
+  &__total {
+    @include input-text-2($neutral-8);
+    margin-top: 19px;
+    margin-bottom: 22px;
+  }
+
+  &__number {
+    @include label-3($neutral-9);
+  }
+}
