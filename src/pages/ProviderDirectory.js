@@ -4,7 +4,7 @@ import LoadingSpinner from '../components/UI/LoadingSpinner';
 import Error from '../components/UI/Error';
 import useProviders from '../hooks/useProviders';
 import { getProvidersByLocation } from '../helpers/selectors';
-import { defaultLocation } from '../constants/locationConstants';
+import { defaultLocation } from '../constants/defaults';
 import './ProviderDirectory.scss';
 
 const ProviderDirectory = () => {

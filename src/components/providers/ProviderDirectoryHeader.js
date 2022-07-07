@@ -1,7 +1,7 @@
 import NavigationLabel from '../UI/NavigationLabel';
 import Dropdown from '../UI/Dropdown';
 import { formatLocationsForDropdown } from '../../helpers/utils';
-import { availableLocations } from '../../constants/locationConstants';
+import { availableLocations } from '../../constants/defaults';
 import LocationPin from '../../assets/icons/location-pin.png';
 import './ProviderDirectoryHeader.scss';
 
