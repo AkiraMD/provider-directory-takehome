@@ -1,13 +1,13 @@
 import NavigationLabel from '../UI/NavigationLabel';
 import Dropdown from '../UI/Dropdown';
-import { getLocationOptions } from '../../helpers/formatters';
-import { availableLocations } from '../../constants/locationConstants';
+import { formatLocationsForDropdown } from '../../helpers/utils';
+import { availableLocations } from '../../constants/defaults';
 import LocationPin from '../../assets/icons/location-pin.png';
 import './ProviderDirectoryHeader.scss';
 
 const ProviderListHeader = ({ location, updateLocation }) => {
   /* Format list of available locations for Dropdown menu */
-  const locationOptions = getLocationOptions(availableLocations);
+  const locationOptions = formatLocationsForDropdown(availableLocations);
 
   return (
     <header className="directory-header">

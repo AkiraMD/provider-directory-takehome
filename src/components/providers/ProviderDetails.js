@@ -1,41 +1,17 @@
-import Card from '../UI/Card';
-import ProviderBio from './ProviderBio';
-import ProviderStatsList from './ProviderStatsList';
-import Button from '../UI/Button';
-import Divider from '../UI/Divider';
-import './ProviderDetails.scss';
+import ProviderDetailItem from './ProviderDetailItem';
+import { formatLanguages } from '../../helpers/utils';
+import map from '../../assets/icons/map.png';
+import gradHat from '../../assets/icons/grad-hat.png';
+import globe from '../../assets/icons/globe.png';
 
-const ProviderDetails = ({ provider }) => {
-  const { name, title, designation, bio, location, education, languages } =
-    provider;
-
-  const bookAppointment = () => {
-    alert('Book an appointment!');
-  };
+const ProviderDetails = ({ location, education, languages }) => {
+  const allLanguages = formatLanguages(languages);
 
   return (
-    <div className="profile__details">
-      {/* Top Profile Section */}
-      <Card>
-        <h3 className="provider__name">
-          {name}, {title}
-        </h3>
-        <p className="provider__designation">{designation}</p>
-        <ProviderBio bio={bio} />
-      </Card>
-      {/* Divider */}
-      <Divider />
-      {/* Bottom Profile Section */}
-      <Card>
-        <ProviderStatsList
-          location={location}
-          education={education}
-          languages={languages}
-        />
-        <Button size="xLarge" onClick={bookAppointment}>
-          Book with us
-        </Button>
-      </Card>
+    <div>
+      <ProviderDetailItem icon={map} label="Location" data={location} />
+      <ProviderDetailItem icon={gradHat} label="Education" data={education} />
+      <ProviderDetailItem icon={globe} label="Language" data={allLanguages} />
     </div>
   );
 };

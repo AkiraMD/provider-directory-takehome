@@ -17,5 +17,12 @@
 
 .read-more {
   @include label-4($secondary-5);
+  display: flex;
+  align-items: center;
   cursor: pointer;
+
+  img {
+    width: 12px;
+    margin-left: 6px;
+  }
 }

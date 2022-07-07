@@ -24,7 +24,7 @@
     padding-left: 12px;
   }
 
-  &--name {
+  &--heading {
     @include label-5($neutral-9);
 
     // Truncate longer titles

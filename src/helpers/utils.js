@@ -1,9 +1,19 @@
 /**
+ * Combine name and title of provider
+ * @param {String} name A provider name.
+ * @param {String} title A provider title.
+ * @return {String} Name with the title.
+ */
+export function formatProviderHeading(name, title) {
+  return `${name}, ${title}`;
+}
+
+/**
  * Format location options for dropdown list
  * @param {[{}]} locations An array of available locations.
  * @return {[]} An array of locations formatted for dropdown use.
  */
-export function getLocationOptions(locations) {
+export function formatLocationsForDropdown(locations) {
   return locations.map((location) => ({
     value: location.name,
     label: location.abbrev,
@@ -16,7 +26,7 @@ export function getLocationOptions(locations) {
  * @param {String} location A selected location.
  * @return {String} Formatted string with correct pluralization.
  */
-export function getProviderText(amountOfProviders, location) {
+export function pluralizeProviders(amountOfProviders, location) {
   if (amountOfProviders === 1) {
     return `provider in ${location}`;
   }
@@ -29,6 +39,6 @@ export function getProviderText(amountOfProviders, location) {
  * @param {[{}]} languages An array of languages
  * @return {String} Formatted string with correct punctuation for multiple languages
  */
-export function getAllLanguages(languages) {
+export function formatLanguages(languages) {
   return languages && languages.length > 1 ? languages.join(', ') : languages;
 }

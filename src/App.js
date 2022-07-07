@@ -5,6 +5,7 @@ import ProviderProfile from './pages/ProviderProfile';
 function App() {
   return (
     <Routes>
+      {/* RESTful Routing */}
       <Route path="/providers" element={<ProviderDirectory />} />
       <Route path="/providers/:providerId" element={<ProviderProfile />} />
       <Route path="*" element={<Navigate to="/providers" replace />} />

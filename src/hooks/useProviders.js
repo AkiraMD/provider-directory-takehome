@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { fetchProviders } from '../lib/api';
+import { fetchProviders } from '../helpers/api';
 
 const useProviders = (location) => {
   const [state, setState] = useState({

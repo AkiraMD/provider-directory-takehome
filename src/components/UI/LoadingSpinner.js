@@ -2,7 +2,7 @@ import './LoadingSpinner.scss';
 
 const LoadingSpinner = () => {
   return (
-    <div className="centered">
+    <div className="loading-container">
       <div className="spinner"></div>
     </div>
   );

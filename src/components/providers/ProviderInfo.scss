@@ -1,14 +1,14 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
 
-.profile__details {
+.provider-info {
   margin-left: 20px;
 
-  .provider__name {
+  &__heading {
     @include sub-heading-1($neutral-9);
   }
 
-  .provider__designation {
+  &__designation {
     @include label-3($neutral-7);
     margin-top: 6px;
   }
