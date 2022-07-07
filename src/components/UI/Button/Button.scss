@@ -1,0 +1,27 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-radius: 2000px;
+  background-color: transparent;
+  background: $neutral-9;
+  cursor: pointer;
+
+  &.xLarge {
+    border: none;
+    padding: 18px 32px;
+    background: $thvc-purple-5;
+  }
+
+  &.xLarge:hover {
+    background: $thvc-purple-4;
+  }
+
+  span {
+    @include button-4($neutral-0);
+  }
+}

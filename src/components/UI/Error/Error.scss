@@ -1,0 +1,25 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+
+  h1 {
+    @include sub-heading-3($primary-5);
+    margin: 24px 0;
+  }
+
+  h2 {
+    @include sub-heading-1($neutral-8);
+  }
+
+  p {
+    @include body-3($neutral-7);
+    margin: 12px 0;
+  }
+}
