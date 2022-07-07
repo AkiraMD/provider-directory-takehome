@@ -7,10 +7,12 @@ This small app implements the requested screens of browsing the Provider Directo
 ### Provider Directory
 
 Patients can select a province and browse a list of available providers in the selected location
+![Provider Directory](https://github.com/Ruby-Zhuang/provider-directory-takehome/blob/master/docs/provider-directory.gif?raw=true)
 
 ### Provider Profile
 
 Patients can select a provider to view their profile
+![Provider Profile](https://raw.githubusercontent.com/Ruby-Zhuang/provider-directory-takehome/master/docs/provider-profile.gif)
 
 ## Tech Stack
 
